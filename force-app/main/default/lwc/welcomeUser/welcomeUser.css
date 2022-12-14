@@ -1,0 +1,223 @@
+.register__card .slds-form-element__label {
+	font-size: 16px;
+	color: #8b8b8b;
+	margin-bottom: 8px;
+}
+
+.register__card .slds-input{
+    border-radius: var(--sds-c-input-radius-border, 15rem);
+	padding: 15px 20px;
+	font-size: 16px;
+}
+
+.spacerAndLeft{
+    margin-top: 2%;
+    text-align: right;
+    
+}
+
+/* To remove arrows in input text */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/*END to remove arrows in input text */
+
+.section__register {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.errorText{
+    color: red;
+}
+
+.register__container {
+	/* width: 70%; */
+	display: flex;
+	height: 100%;
+	padding: 60px 0 100px;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.margin-2{
+	margin-left: 2%;
+}
+
+.logo__container {
+	text-align: center;
+}
+
+.intro__text-container {
+	max-width: 100%;
+}
+
+h1 {
+	font-size: 2.5rem;
+	text-align: center;
+}
+
+.rana__navbar {
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .10);
+	height: 77px;
+	position: relative;
+}
+
+.rana__navbar .logo__container img {
+	width: 132px;
+	transform: translateY(10px);
+}
+
+.register__card {
+	/* min-width: 350px; */
+	padding: 30px 0;
+	/* background-color: #fafafa; */
+	/* border: 1px solid #e2e2e2; */
+	/* border: 2px solid #e8dcce; */
+	/* box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .10); */
+	border-radius: 20px;
+	margin-top: 30px;
+}
+
+.register__flex {
+	flex-direction: row;
+}
+
+.col__one {
+	padding: 0 30px;
+	/* min-width: 350px; */
+}
+
+/* .col__two {
+	padding: 0 30px;
+	border-left: 1px solid #dddbda;
+	max-width: 350px;
+} */
+
+h2 {
+	font-size: 40px;
+	text-align: center;
+	text-transform: uppercase;	
+	line-height: 1.2;
+	font-weight: 300;
+	letter-spacing: 1.54px;
+	color: #8b8b8b;
+	margin-bottom: 20px;
+}
+p {
+	text-align: center;
+}
+
+.slds-form-element {
+	width: 100%;
+	margin-top: 10px;
+}
+
+.slds-button {
+	display: block;
+	width: 100%;
+	margin-top: 20px;
+	font-size: 16px;
+	padding: 15px;
+	border-radius: var(--sds-c-input-radius-border, 15rem);
+    background-color: var(--sds-c-button-neutral-color-background, rgb(236, 139, 60));
+	transition: .2s all ease;
+}
+
+.slds-button:hover {
+	background-color: #feda50;
+}
+.slds-button:disabled {
+	background-color: rgba(254, 229, 131, .35);
+}
+.register__link {
+	display: block;
+	text-align: center;
+	font-size: 16px;
+	margin-top: 10px;
+	/* color: #aaa8a8; */
+	color: #003362;
+	text-decoration: underline;
+}
+.slds-button-go-home {
+	display: block;
+    padding: 0 30px;
+    margin: 20px auto;
+}
+
+.btn-green {
+	background-color: #006643;
+	color: #fff;
+	transition: .3s all;
+}
+.btn-green:hover {
+	background-color: #006642e7;
+	color: #fff;
+}
+
+.register__container h3 {
+	font-size: 1rem;
+	font-weight: 300;
+	text-align: center;
+}
+
+@media (max-width: 768px) {
+	.register__container {
+		/* width: 70%; */
+		padding: 60px 0;
+	}
+
+	.intro__text-container {
+		max-width: 60%;
+	}
+
+	.register__flex {
+		flex-direction: column;
+	}
+
+	.register__card {
+		/* width: 70%; */
+		margin: auto;
+		margin-top: 30px;
+	}
+
+	/* .col__one {
+		min-width: initial;
+	} */
+
+	/* .col__two {
+		border: none;
+		max-width: initial;
+		margin-top: 30px;
+	} */
+
+	.register__container {
+		padding-top: 30px;
+		border-top: 1px solid #dddbda;
+	}
+}
+
+@media (max-width: 480px) {
+	.intro__text-container {
+		max-width: 80%;
+	}
+
+	h1 {
+		font-size: 2rem;
+	}
+
+	h2 {
+		font-size: 1.2rem;
+	}
+
+}

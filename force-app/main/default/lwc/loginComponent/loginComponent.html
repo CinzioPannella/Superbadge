@@ -1,0 +1,42 @@
+<template>
+        <template if:true={showSpinner}>  <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner></template>
+      <div class="slds-grid slds-gutters">
+        <div class="slds-col"></div>
+        <div class="slds-col">     
+            <div class="login__card">
+              <div class="login__flex">
+                
+                <div class="col__one">
+                  <h2>Login</h2>
+      
+                  <div class="form__container">
+                    <div class="slds-form-element slds-p-top_medium">
+                      <!--<label class="slds-form-element__label" for="text-input-id-1">
+                        <abbr class="slds-required" title="required">* </abbr>Username</label>-->
+                      <div class="slds-form-element__control">
+                        <input type="email" name="username" id="text-input-id-1" placeholder="Insert Username" required="" class="slds-input" onchange={clearError} />
+                      </div>
+                    </div>
+              
+                    <div class="slds-form-element slds-p-top_medium">
+                      <!--<label class="slds-form-element__label" for="text-input-id-2">
+                        <abbr class="slds-required" title="required">* </abbr>Password</label>-->
+                      <div class="slds-form-element__control">
+                        <input type="password" name="password" id="text-input-id-2" placeholder="Insert Password" required="" class="slds-input" onchange={clearError} />
+                      </div>
+                    </div>
+                  </div> 
+                  
+                  <p style="color:red;max-width: 350px;">{errorMessage}</p>
+                  <div class="slds-p-top_medium slds-form-element">
+                    <button class="slds-button slds-button_brand slds-m-bottom--xx-small" onclick={login} style="color:black;">Login</button>
+                    <a href="/s/resetpassword" style="float:right;">Password Dimenticata</a>
+                    <!-- <a class="slds-button slds-button_brand slds-m-bottom--xx-small" style="color:black;" href={registerUrl}>{labels.register}</a> -->
+                  </div>  
+                </div>    
+              </div>  
+            </div>    
+        </div>
+        <div class="slds-col"></div>
+      </div>
+</template>

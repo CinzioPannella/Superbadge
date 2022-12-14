@@ -1,0 +1,14 @@
+<aura:component implements="forceCommunity:themeLayout">
+    <div class="slds-grid slds-grid--align-center">
+        <div class="slds-col">
+            <div class="slds-grid slds-grid--vertical">
+                <div class="slds-col">
+                    <div class="logoContainer"></div>
+                </div>
+            </div>
+        </div>
+        <div class="slds-col content">
+            {!v.body}
+        </div>
+    </div>
+</aura:component>

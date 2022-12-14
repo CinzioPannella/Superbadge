@@ -1,0 +1,32 @@
+/* .slds-input{
+    border-radius: var(--sds-c-input-radius-border, 15rem);
+} */
+
+
+
+.register__card .slds-form-element__label {
+	font-size: 16px;
+	color: #8b8b8b;
+	margin-bottom: 8px;
+}
+
+.slds-checkbox .slds-checkbox__label{
+	font-size: 16px;
+}
+
+.register__card .slds-input{
+    border-radius: var(--sds-c-input-radius-border, 15rem);
+	padding: 15px 20px;
+	font-size: 16px;
+}
+.slds-select {
+	border-radius: var(--sds-c-input-radius-border, 15rem);
+	padding: 19px 20px;
+	font-size: 16px;
+	height: 100%;
+}
+
+.register__card .slds-form-element__control .slds-form-element__label {
+	font-size: 16px;
+	margin-bottom: 16px;
+}

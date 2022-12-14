@@ -1,0 +1,260 @@
+<template>
+	<!-- <div if:false={isLoaded} class="slds-align--absolute-center">
+		<lightning-spinner
+			alternative-text="Loading..." variant="brand">
+		</lightning-spinner>
+	</div> -->
+
+	
+
+	<section class="section__registration">
+		<div class="register__container">
+		
+			<div class="register__card">
+				<div class="register__flex">
+					<!-- First col -->
+					<div class="col__one">
+						<div class="px-3">
+							<h2 class="mb-3">REGISTRATI</h2>
+						</div>
+						<div style="text-align: center">
+							<div class="errorText" data-id="backendError"></div>
+						</div>
+
+						<div class="px-3">
+							<div class="slds-grid  slds-gutters_medium slds-wrap mt-3">
+								<!-- NOME -->
+								<div class="slds-col slds-size_1-of-1 slds-large-size_1-of-2">
+									<div class="slds-form-element">
+										<label class="slds-form-element__label" for="text-input-id-1">
+											<!-- {label.First_name} --> Nome *</label>
+										<div class="slds-form-element__control">
+										<input type="text" placeholder="Name" name="Name" data-id="Name" data-error="nameError"
+											class="slds-input" onchange={resetInputErrors} />
+										</div>
+										<div class="errorText" data-id="nameError"></div>
+									</div>
+								</div>
+								<div class="slds-col slds-size_1-of-1 slds-large-size_1-of-2">
+									<!-- COGNOME -->
+									<div class="slds-form-element">
+										<label class="slds-form-element__label" for="text-input-id-1">
+											<!-- {label.Last_name} --> Cognome *</label>
+										<div class="slds-form-element__control">
+											<input type="text" placeholder="Surname" name="Surname" data-id="Surname" data-error="surnameError"
+												class="slds-input" onchange={resetInputErrors} />
+										</div>
+										<div class="errorText" data-id="surnameError"></div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="slds-grid  slds-gutters_medium slds-wrap">
+								<!-- EMAIL -->
+	
+								<div class="slds-col slds-size_1-of-1">
+									<div class="slds-form-element">
+										<label class="slds-form-element__label" for="text-input-id-1">
+											<!-- {label.Email} --> email *</label>
+										<div class="slds-form-element__control">
+											<input type="text" placeholder="\{label.Email}" name="Email" data-id="Email" data-error="emailError"
+												class="slds-input" onchange={resetInputErrors} />
+										</div>
+										<div class="errorText" data-id="emailError"></div>
+									</div>
+								</div>
+								<div class="slds-col slds-size_1-of-1 slds-large-size_1-of-2">
+									<!-- empty-->
+								</div>
+							</div>
+
+							<div class="slds-grid slds-gutters_medium slds-wrap">
+								<!--PASSWORD-->
+								<div class="slds-col slds-size_1-of-1 slds-large-size_1-of-2">
+								  <div class="slds-form-element">
+									  <label class="slds-form-element__label" for="text-input-id-1">
+										<!-- {label.Password} --> password *</label>
+										<div class="tooltip">
+											<lightning-icon
+													icon-name="utility:info"
+													size="xx-small"
+													alternative-text="passord Info">
+											</lightning-icon>
+											<span class="tooltiptext"><lightning-formatted-rich-text
+												value="\{label.pwdRules}"
+											></lightning-formatted-rich-text></span>
+										  </div>
+	  
+										  <div class="slds-form-element__control">
+											  <input type="password" placeholder="\{label.Password}" name="Password" data-id="Password" data-error="passwordError"
+												  class="slds-input" onchange={resetInputErrors} />
+										  </div>
+										  <div class="errorText" data-id="passwordError"></div>
+									  </div>
+									  </div>
+								  <!-- CONFIRM PASSWORD-->
+									<div class="slds-col slds-size_1-of-1 slds-large-size_1-of-2">
+										<div class="slds-form-element">
+											<label class="slds-form-element__label" for="text-input-id-1">
+												<!-- {label.Confirm_Password} --> conferma password *</label>
+											<div class="slds-form-element__control">
+											
+											
+												<input type="password" placeholder="\{label.Confirm_Password}" name="Password" data-id="ConfermaPassword" data-error="confirmPasswordError"
+													class="slds-input" onchange={resetInputErrors} />
+	
+												<div class="errorText" data-id="confirmPasswordError"></div>
+											</div>
+										</div>
+									</div>
+								  </div>
+							
+								  <!-- <div class="slds-grid slds-gutters_medium slds-wrap">
+							
+									<div class="slds-col slds-size_1-of-1 slds-large-size_1-of-2">
+										<div class="slds-form-element">
+											<div class="slds-form-element__control">
+												<label class="slds-form-element__label" for="text-input-id-1">
+													Seleziona sesso *</label>
+												<select class="slds-select" onchange={sexChange} id="select-01">
+													<option value="">Seleziona sesso *</option>
+													<option value="Uomo">Uomo</option>
+													<option value="Donna">Donna</option>
+												  </select>
+											</div>
+										</div>
+									</div>
+								
+								
+										<div class="slds-form-element">
+											<label class="slds-form-element__label" for="text-input-id-1">
+											Data di Nascita *</label>
+											<div class="slds-form-element__control">
+											<input type="date" data-id="DataDiNascita" placeholder="Data di Nascita" label="Data di nascita" data-error="DataDiNascitaError"
+																		class="slds-input" onchange={resetInputErrors} required />
+											</div>
+											<div class="errorText" data-id="bDateError"></div>
+										</div>
+									</div> -->
+								</div>
+								<!-- CODICE CONVENZIONE 
+								<div class="slds-grid slds-gutters_medium slds-wrap mb-3">
+									
+									<div class="slds-col slds-size_1-of-1">
+										<div class="slds-form-element">
+											<label class="slds-form-element__label" for="text-input-id-1">
+											Codice Convenzione</label>
+											<div class="slds-form-element__control">
+												<input type="text" placeholder="Codice Convenzione" name="CodiceConvenzione" data-id="CodiceConvenzione"
+													data-error="convenzioneError" class="slds-input" onchange={resetInputErrors} />
+											</div>
+											<div class="errorText" data-id="phoneError"></div>
+										</div>
+									</div>
+									
+								</div>-->
+	
+							</div>
+							
+							  
+							
+							<div class="px-3">
+								<div class="slds-form-element mt-3">
+									<div class="align-items-center slds-form-element__control slds-grid">
+										<!-- <lightning-input label="Al fine di iscrivermi all'area riservata dichiaro di essere maggiorenne e di aver compreso l'informativa privacy" type="checkbox" onchange={setGDPR} data-id="personalDataCheck"></lightning-input> -->
+										<input type="checkbox" name="terms" onclick={setGDPR} data-id="personalDataCheck" class="slds-m-right--small" ></input>
+										<label for="terms" class="slds-form-element__label mb-0 " > 
+											<lightning-formatted-rich-text value="\{label.subscribe}"> </lightning-formatted-rich-text></label>
+									
+									</div>
+									<div class="errorText" data-id="personalDataCheckError"></div>
+								</div>
+	
+								<div class="slds-form-element mt-3">
+									<div class="align-items-center slds-form-element__control slds-grid">
+										
+										<input type="checkbox" name="marketingCheck" onclick={setMKT} data-id="personalMarketingCheck" class="slds-m-right--small" ></input>
+										<label for="marketingCheck" class="slds-form-element__label mb-0 " > 
+											<lightning-formatted-rich-text value="\{label.marketing_activities}"> </lightning-formatted-rich-text></label>
+									
+									</div>
+
+									<!--<div class="slds-form-element__control">
+										<label class="slds-form-element__label">{label.marketing_activities}</label>
+										<form>
+											<input class="slds-form-element__label me-1" type="radio" onchange={getMarketing} data-value="true" name="optradio" id="radio1">
+											<label class="slds-form-element__label radio-inline me-2" for="radio1">{label.Yes}</label>
+											
+											<input class="slds-form-element__label me-1 " type="radio" onchange={getMarketing} data-value="false" name="optradio" id="radio2">
+											<label class="slds-form-element__label radio-inline" for="radio2">{label.No}</label>
+											
+										</form>  
+									</div>-->
+									<div class="errorText" data-id="marketingCheckError"></div>
+								</div>
+								<!-- <div class="slds-form-element mt-0 mb-3">
+									<div class="slds-form-element__control">
+										<label class="slds-form-element__label">{label.profiling_purposes}</label>
+										<form>
+											<input class="slds-form-element__label me-1" type="radio" name="optradio" id="radio3"> 
+											<label class="slds-form-element__label  radio-inline me-2" for="radio3">{label.Yes}</label>
+											
+											<input class="slds-form-element__label me-1" id="radio4" type="radio" name="optradio">
+											<label class="slds-form-element__label radio-inline" for="radio4">{label.No}</label>
+										</form> 
+									</div>
+									<div class="errorText" data-id="newsletterCheckError"></div>
+								</div> -->
+							</div>
+							
+							
+	
+	
+							
+							
+	
+	
+	
+							<!-- <div class="slds-form-element">
+								<div class="slds-form-element__control">
+									<lightning-input label="Al fine di iscrivermi all'area riservata dichiaro di essere maggiorenne e di aver compreso l'informativa privacy" type="checkbox" onchange={setGDPR} data-id="personalDataCheck"></lightning-input>
+								</div>
+								<div class="errorText" data-id="personalDataCheckError"></div>
+							</div>
+							<div class="slds-form-element">
+								<div class="slds-form-element__control">
+									<lightning-input label="Presto il consenso per attività di marketing quali l'invio di materiale promozionale e pubblicitario, anche a mezzo email, sms o equivalenti, come meglio esplicitato nell'informativa privacy" type="checkbox" onchange={setNewsletter} data-id="marketingCheck"></lightning-input>
+								</div>
+								<div class="errorText" data-id="marketingCheckError"></div>
+							</div>
+							<div class="slds-form-element">
+								<div class="slds-form-element__control">
+									<lightning-input label="Presto il consenso per finalità di profilazione e per il trattamento relativo ad abitudini o scelte di consumo ultilizzando le informazioni come indicato nell'informativa privacy" type="checkbox" onchange={setNewsletter} data-id="profilazioneCheck"></lightning-input>
+								</div>
+								<div class="errorText" data-id="newsletterCheckError"></div>
+							</div> -->
+	
+							<div class="px-3">
+								<button class="slds-button custom_button-yellow" onclick={goNext} disabled={nextDisabled} >
+									<p>{Register}</p>
+								</button>
+								
+								<div class="link-container">
+									<a class="register__link" onclick={returnLogIn}>
+										{already_registered}
+									</a>
+								</div>
+
+								<div class="link-container">
+									<a class="register__link" href={retUrl}>
+										{torna_al_sito}
+									</a>
+								</div>
+							</div>
+	
+						</div>
+					</div>
+			</div>
+		</section>
+	
+	</template>

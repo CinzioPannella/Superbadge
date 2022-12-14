@@ -1,0 +1,68 @@
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnore -->
+<template>
+    <section class="section__registration">
+        <div class="register__container">
+            <div class="register__card">
+                <div class="register__flex">
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-m-top_xx-large">
+                                <h3 style="margin-bottom:24px;">Dati Personali</h3>
+                                <div class="slds-form">
+                                    <div class="slds-grid slds-wrap">
+                                        <!-- FirstName -->
+                                        <div class="slds-col slds-size_12-of-12 slds-large-size_6-of-12">
+                                            <div class="slds-form-element slds-form-element_stacked">
+                                                <div class="slds-form-element__control" style="border-radius: 20px;">
+                                                    <lightning-input type="text" id="FirstName" value={userFirstName} placeholder="Inserire Nome" label="Nome" 
+                                                        data-field="FirstName" disabled>
+                                                    </lightning-input>
+                                               </div>
+                                            </div>
+                                        </div>
+                                        <!-- LastName -->
+                                        <div class="slds-col slds-size_12-of-12 slds-large-size_6-of-12">
+                                            <div class="slds-form-element slds-form-element_stacked">
+                                                <div class="slds-form-element__control">
+                                                    <lightning-input type="text" id="LastName" value={userLastName} placeholder="Inserire Cognome" label="Cognome"
+                                                        data-field="LastName" disabled>
+                                                    </lightning-input>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Username -->
+                                        <div class="slds-col slds-size_12-of-12 slds-large-size_6-of-12">
+                                            <div class="slds-form-element slds-form-element_stacked">
+                                                <div class="slds-form-element__control">
+                                                    <lightning-input type="text" id="Username" value={userUserName} placeholder="Inserire Username" label="Username" 
+                                                        data-field="Username" disabled>
+                                                    </lightning-input>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Identificativo -->
+                                        <div class="slds-col slds-size_12-of-12 slds-large-size_6-of-12">
+                                            <div class="slds-form-element slds-form-element_stacked">
+                                                <div class="slds-form-element__control">
+                                                    <lightning-input type="text" id="codiceUnivoco" value={userCodiceUnivoco} placeholder="Inserire Codice Univoco" label="Code" 
+                                                        data-field="codiceUnivoco__c" disabled>
+                                                    </lightning-input>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <template if:true={isCase}>
+        <lightning-card title="Casi" icon-name="standard:case">
+            <lightning-datatable data={caseData} columns={columns} key-field="CaseNumber">
+            </lightning-datatable>
+        </lightning-card> 
+    </template>
+</template>
